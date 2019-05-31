@@ -1,0 +1,21 @@
+number Er = -70m,
+       Rm = 15000,
+       Ri = 70,
+       Cm = 1u
+
+number mult=1
+
+istep.1		1	0	=0, 1n, 0, 1m, 1.2m
+soma.1            1       0       =6019, Er, Rm, Ri, Cm, mult
+tree413501.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413502.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413503.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413504.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413505.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413506.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413507.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413508.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413602.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413603.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413605.1  1       0       = Er, 15000, Ri, Cm, mult
+tree413606.1  1       0       = Er, 15000, Ri, Cm, mult

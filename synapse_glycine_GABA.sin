@@ -1,0 +1,58 @@
+element template synapse_glycine_GABA		in  out	= esyn, td, gpeak, Rm, Cm
+
+electrical	in, out
+
+number	esyn = -64m,
+		td = 0,
+		gpeak = 12.2n,
+		Rm = 15000,
+		Cm = 1u
+	
+
+{
+
+number	tp = 0.37m,
+		tdecay1 = 3.1m,
+		tdecay2 = 14.1m,
+		A = 0.74, 
+		B = 0.26
+		
+val g	gsyn
+val v	vm
+val i	i
+val nu T
+
+values	{
+	T = (time - td)
+
+	vm = v(in) - v(out)
+
+	if (time < td){
+		i = 0
+		}
+
+	else	{
+	      #if (T < tp){
+		#	i = -(vm - esyn) * gpeak*(T)*(exp(1-T/tp))/tp
+		#}
+		#else {
+		#	i = -(vm - esyn) * gpeak*(A*exp(-(T - tp)/tdecay1) + B*exp(-(T - tp)/tdecay2))
+		#}
+		if (time < tp){
+			gsyn = gpeak * (T)*(exp(1-T/tp))/tp
+			i = -(vm - esyn) * gsyn 
+		}
+		else {
+			gsyn = gpeak*(A*exp(-(T - tp)/tdecay1) + B*exp(-(T - tp)/tdecay2))
+			i = -(vm - esyn) * gsyn 
+		}
+
+
+	}
+}
+equations 	{
+	i(in->out) += i
+	}
+
+}
+

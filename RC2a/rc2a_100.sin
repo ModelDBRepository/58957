@@ -1,0 +1,20 @@
+number Er = -64m,
+
+	Rm = 15000,
+
+       Ri = 70,
+       Cm = 1u
+
+number mult=1
+
+istep.1 1 0 =0, 0n, 0, 1m, 1.2m
+
+soma.1 1 0 =2281, Er, Rm, Ri, Cm, mult
+
+treed01220.1	1	0	= Er, Rm, Ri, Cm, mult
+treed02220.1	1	0	= Er, Rm, Ri, Cm, mult
+treed03220.1	1	0	= Er, Rm, Ri, Cm, mult
+treed04220.1	1	0	= Er, Rm, Ri, Cm, mult
+synapsetI.10000	1	0	=0.65m, -81m, 0m, 36.272n,Rm,Cm
+synapset.10000	1	0	=0.20m, 0m, 0m, 3.1n,Rm,Cm
+vstep.1		1	0	=-64m, 0m, 10m

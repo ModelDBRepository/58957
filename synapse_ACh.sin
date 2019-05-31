@@ -1,0 +1,53 @@
+element template synapse_ACh		in  out	= esyn, td, gpeak, Rm, Cm
+
+electrical	in, out
+
+number	esyn = -5m,
+		td = 0,
+		gpeak = 5n,
+		Rm = 15000,
+		Cm = 1u
+	
+
+{
+
+number	tp = 0.41m,
+		tdecay = 1.2m,
+		tau, alpha
+		
+
+val g	gsyn
+val v	vm
+val i	i
+val nu	T
+
+parameters	{
+		tau = Rm * Cm
+		alpha = tau / tp
+		}
+
+values	{
+	T = (time - td)
+
+	vm = v(in) - v(out)
+
+	if (time < td){
+		i = 0
+		}
+
+	else	{
+	      if (T < tp){
+			i = -(vm - esyn) * gpeak*(T)*(exp(1-T/tp))/tp
+		}
+		else {
+			i = -(vm - esyn) * gpeak*exp(-(T - tp)/tdecay)
+
+		}
+	}
+}
+equations 	{
+	i(in->out) += i
+	}
+
+}
+
