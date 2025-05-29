@@ -31,15 +31,15 @@ The Renshaw cell models have glycinergic/GABAergic synapses and cholinergic syna
 
 ## Contact Information
 
-Tuan V. Bui
-Queen's University
-Dept Physiol
-Botterell Hall
-Kingston ON K7L 3N6
+Tuan V. Bui  
+Queen's University  
+Dept Physiol  
+Botterell Hall  
+Kingston ON K7L 3N6  
 Canada
 
-Work Phone: 613-533-6000 ext.74853
-Fax: 613-533-6840
+Work Phone: 613-533-6000 ext.74853  
+Fax: 613-533-6840  
 E-mail Address: [tuan@biomed.queensu.ca](mailto:tuan@biomed.queensu.ca)
 
 ---
